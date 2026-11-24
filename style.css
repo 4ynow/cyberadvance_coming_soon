@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #0a0a0a;          
+    --bg-color: #050505;          
     --text-main: #ffffff;         
     --text-muted: #888888;        
 }
@@ -12,62 +12,76 @@
 
 body {
     background-color: var(--bg-color);
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
     color: var(--text-main);
     font-family: 'Inter', -apple-system, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     width: 90%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .eyebrow {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.4em;
     color: var(--text-muted);
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 h1 {
-    font-size: 7rem; 
+    font-size: clamp(5rem, 15vw, 14rem);
     font-weight: 800;
-    letter-spacing: -0.05em;
-    line-height: 1;
-    margin-bottom: 2rem;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    margin-bottom: 5rem;
 }
 
 .subtitle {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     color: var(--text-muted);
     font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 4rem;
+    line-height: 1.4;
+    max-width: 800px;
+    margin-bottom: 6rem;
 }
 
 .status {
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-main);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
+    border-bottom: 2px solid var(--text-muted);
+    padding-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 3.5rem;
-    }
-    .subtitle {
-        font-size: 1.2rem;
-    }
     .eyebrow {
-        font-size: 0.8rem;
+        margin-bottom: 3rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+    }
+    
+    h1 {
+        margin-bottom: 3rem;
+    }
+    
+    .subtitle {
+        margin-bottom: 4rem;
+        font-size: 1.2rem;
     }
 }
