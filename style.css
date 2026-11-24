@@ -12,10 +12,10 @@
 
 body {
     background-color: var(--bg-color);
-    background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
     color: var(--text-main);
     font-family: 'Inter', -apple-system, sans-serif;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,46 +24,45 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 800px;
     width: 90%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .eyebrow {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.3em;
     color: var(--text-muted);
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 h1 {
-    font-size: clamp(5rem, 15vw, 14rem);
+    font-size: clamp(3.5rem, 8vw, 6rem);
     font-weight: 800;
     letter-spacing: -0.04em;
-    line-height: 0.9;
-    margin-bottom: 5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
 }
 
 .subtitle {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
     color: var(--text-muted);
     font-weight: 400;
-    line-height: 1.4;
-    max-width: 800px;
-    margin-bottom: 6rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-bottom: 4rem;
 }
 
 .status {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-main);
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     border-bottom: 2px solid var(--text-muted);
     padding-bottom: 0.5rem;
@@ -71,17 +70,14 @@ h1 {
 
 @media (max-width: 768px) {
     .eyebrow {
-        margin-bottom: 3rem;
-        font-size: 0.9rem;
-        letter-spacing: 0.2em;
+        margin-bottom: 1.5rem;
     }
     
     h1 {
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
     }
     
     .subtitle {
-        margin-bottom: 4rem;
-        font-size: 1.2rem;
+        margin-bottom: 3rem;
     }
 }
