@@ -1,8 +1,7 @@
 :root {
-    --bg-color: #09090b;          
-    --text-main: #fafafa;         
-    --text-muted: #a1a1aa;        
-    --accent-color: #3b82f6;      
+    --bg-color: #0a0a0a;          
+    --text-main: #ffffff;         
+    --text-muted: #888888;        
 }
 
 * {
@@ -19,61 +18,56 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.background-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(9, 9, 11, 0) 70%);
-    z-index: -1;
-    pointer-events: none;
+    text-align: center;
 }
 
 .container {
-    text-align: center;
-    max-width: 500px;
+    max-width: 900px;
     width: 90%;
     padding: 2rem;
 }
 
-.badge {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: rgba(59, 130, 246, 0.1);
-    color: var(--accent-color);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    border-radius: 20px;
-    font-size: 0.75rem;
+.eyebrow {
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
 }
 
 h1 {
-    font-size: 2.8rem;
-    font-weight: 600;
+    font-size: 7rem; 
+    font-weight: 800;
     letter-spacing: -0.05em;
-    margin-bottom: 1rem;
+    line-height: 1;
+    margin-bottom: 2rem;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     color: var(--text-muted);
-    font-weight: 300;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 4rem;
 }
 
-@media (max-width: 500px) {
+.status {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
     .subtitle {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+    .eyebrow {
+        font-size: 0.8rem;
     }
 }
